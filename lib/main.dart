@@ -1,8 +1,15 @@
 import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+import 'bd.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  print("antes await");
+  await Firebase.initializeApp();
+  print("passou await");
   runApp(const MyApp());
 }
 
@@ -23,6 +30,17 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+}
+
+void testeConexao() {
+  print("entrou no testeConexao");
+  var banco = bd();
+  print("passou inicial");
+  banco.testeInicial();
+  print("passou inicial");
+  banco.testMeio();
+
+  print("passou meio");
 }
 
 class MyHomePage extends StatelessWidget {
@@ -97,6 +115,13 @@ class GeneratorPage extends StatelessWidget {
                   appState.getNext();
                 },
                 child: Text('Next'),
+              ),
+              SizedBox(width: 10),
+              ElevatedButton(
+                onPressed: () {
+                  testeConexao();
+                },
+                child: Text('BD'),
               ),
             ],
           ),

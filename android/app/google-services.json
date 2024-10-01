@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "969663216287",
+    "project_id": "testeconnect-18fa1",
+    "storage_bucket": "testeconnect-18fa1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969663216287:android:0b48bcbe9ec1b7836c00aa",
+        "android_client_info": {
+          "package_name": "br.com.laura.word_pair"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWvmPNb7mxr1aAguGS1R0Vu5ZfhwMtn90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
